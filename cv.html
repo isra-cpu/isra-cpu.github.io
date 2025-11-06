@@ -1,4 +1,117 @@
-# mon.cv
-# cv
-#mon.cv
-# cv 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mon CV</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Hero Animations */
+.hero h1, .hero img {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s ease-out;
+}
+.hero h1.animate, .hero img.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Background Gradient Animé */
+.hero {
+  background: linear-gradient(135deg, #fce4f5, #ffe0f0, #f9e0fc, #ffe0f5);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  border-radius: 30px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+</head>
+<body>
+
+<div class="container mt-4">
+
+  <!-- Description -->
+  <p class="text-center" style="font-size:20px; color:#c28ca7; max-width:600px; margin:auto;" data-aos="fade-down">
+    Je suis une femme créative qui aime transformer les choses simples en beauté.
+  </p>
+
+  <!-- Hero Section -->
+  <div class="hero d-flex flex-wrap align-items-center justify-content-center gap-3 my-4 p-4 rounded shadow" data-aos="fade-right" data-aos-duration="1000">
+    <h1>Werghemmi Issrae</h1>
+    <img src="image.jpg" alt="Werghemmi Issrae" class="rounded-circle" style="width:160px; height:160px; object-fit:cover; box-shadow:0 12px 30px rgba(0,0,0,0.1);">
+  </div>
+
+  <!-- Contact -->
+    <div class="text-center mb-4">
+    <p>Téléphone: <strong>20618403</strong> | Tunis</p>
+    <p>Email: 
+    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+        werghemmiissrae58@gmail.com
+    </a>
+</p>
+    </div>
+
+  <!-- Experience Section -->
+  <div class="row g-4">
+    <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Experience</h5>
+          <p class="card-text">Ajoutez ici vos expériences professionnelles ou projets réalisés.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formation Section -->
+    <div class="col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Formation</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">2011-2016 — Ecole Hay Rawdha</li>
+            <li class="list-group-item">2017-2020 — Collège</li>
+            <li class="list-group-item">2020-2023 — Lycée secondaire</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="col-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Skills</h5>
+          <span class="badge bg-primary me-2">Communication</span>
+          <span class="badge bg-success me-2">Travail en équipe</span>
+          <span class="badge bg-warning text-dark me-2">Créativité</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 1000,
+  easing: 'ease-out-cubic',
+  once: true,
+});
+
+// Hero custom animation
+window.addEventListener('load', () => {
+  document.querySelectorAll('.hero h1, .hero img').forEach(el => el.classList.add('animate'));
+});
+</script>
+</body>
+</html>
